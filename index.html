@@ -1,72 +1,126 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Test Form</title>
+<html lang="en">
 
-        <link href="css/main.css" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Test</h1>
-        <p>This is a little form to train creating a webpage to submit google forms</p>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
 
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeVN9KhoSn4cEVrfG5W8q2vheR7cPI5kqMrMsZd6HxoQwkHjg/formResponse" target="_blank">
-            <!-- Champs d'email -->
-            <div class ="email">
-                <input type ="email" name="emailAddress" required placeholder="Adresse email" />
-            </div>
+    <!-- Title Page-->
+    <title>Test</title>
 
-            <!-- Champs de réponse courte -->
-            <div class ="Short">
-                <input type ="text" name="entry.1041468129" required placeholder="Résponse courte" />
-            </div>
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-            <!-- Champs de réponse longue -->
-            <div class ="Long">
-                <input type ="text" name="entry.1900957175" required placeholder="Résponse longue" />
-            </div>
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
-            <!-- Champs de choix multiple -->
-            <div class ="Mult">
-                <label for=""> Choix multiple </label>
-                <div class="radio">
-                    <input type ="radio" id="choix_multiple_1" name="entry.721031472" value="choix multiple 1" />
-                    <label for="choix_multiple_1"> Choix 1 </label><br/>
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Test</h2>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeVN9KhoSn4cEVrfG5W8q2vheR7cPI5kqMrMsZd6HxoQwkHjg/formResponse" target="_blank" method="POST">
+                        <!-- Champs d'email -->
+                        <div class ="input-group">
+                            <input class="input--style-3" type ="email" name="emailAddress" placeholder="Adresse email" required/>
+                        </div>
+
+                         <!-- Champs de réponse courte -->
+                        <div class ="input-group">
+                            <input class="input--style-3" type ="text" name="entry.1041468129" placeholder="Résponse courte" required />
+                        </div>
+                        
+                        <!-- Champs de réponse longue -->
+                        <div class ="input-group">
+                            <input class="input--style-3" type ="text" name="entry.1900957175" placeholder="Résponse longue" required/>
+                        </div>
+
+                       
+<!-------------- Ajouter le css dans main pour les deux types de choix -----------------
+ 
+                        // Champs de choix multiple 
+                        <div class ="input-group">
+                            <label for=""> Choix multiple </label>
+                            <div class="radio">
+                                <input type ="radio" id="choix_multiple_1" name="entry.721031472" value="choix multiple 1" />
+                                <label for="choix_multiple_1"> Choix 1 </label><br/>
+                            </div>
+
+                            <div class ="input-group">
+                                <input type ="radio" id="choix_multiple_2" name="entry.721031472" value="choix multiple 2" />
+                                <label for="choix_multiple_2"> Choix 2 </label>
+                            </div>
+                        </div>
+                        
+
+                        <div class="input-group">
+                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                        </div>
+
+                        //Champs de cases à cocher
+                        <div class ="input-group">
+                            <label> Cases à cocher </label><br/>
+                            <div class="checkbox">
+                                <input type ="checkbox" id="case_a_cocher_1" name="entry.1911949103" value="Choix cocher 1"/>
+                                <label for="case_a_cocher_1">Check 1</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type ="checkbox" id="case_a_cocher_2" name="entry.1911949103" value="Choix cocher 2"/>
+                                <label for="case_a_cocher_2">Check 2</label>
+                            </div>
+                        </div>
+
+------------------------------------------------------------------------------------------>
+
+                        <!-- Champs de liste déroulante de 4 options-->
+                        <div class ="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="entry.1307974256" id="list" required>
+                                    <option value="Select" selected disabled hidden>Select</option>
+                                    <option value="Liste déroulante 1">Liste déroulante 1</option>
+                                    <option value="Liste déroulante 2">Liste déroulante 2</option>
+                                    <option value="Liste déroulante 3">Liste déroulante 3</option>
+                                    <option value="Liste déroulante 4">Liste déroulante 4</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
-
-                <div class ="radio">
-                    <input type ="radio" id="choix_multiple_2" name="entry.721031472" value="choix multiple 2" />
-                    <label for="choix_multiple_2"> Choix 2 </label>
-                </div>
             </div>
+        </div>
+    </div>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
 
-            <!-- Champs de cases à cocher -->
-            <div class ="Cheklist">
-                <label> Cases à cocher </label><br/>
-                <div class="checkbox">
-                    <input type ="checkbox" id="case_a_cocher_1" name="entry.1911949103" value="Choix cocher 1"/>
-                    <label for="case_a_cocher_1">Check 1</label>
-                </div>
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
 
-                <div class="checkbox">
-                    <input type ="checkbox" id="case_a_cocher_2" name="entry.1911949103" value="Choix cocher 2"/>
-                    <label for="case_a_cocher_2">Check 2</label>
-                </div>
-            </div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
-            <!-- Champs de liste déroulante de 4 options-->
-             <div class ="List">
-                <label> Liste déroulante </label>
-                <select name="entry.1307974256" id="list" required>
-                    <option value="Select" selected disabled hidden>Select</option>
-                    <option value="Liste déroulante 1">Liste déroulante 1</option>
-                    <option value="Liste déroulante 2">Liste déroulante 2</option>
-                    <option value="Liste déroulante 3">Liste déroulante 3</option>
-                    <option value="Liste déroulante 4">Liste déroulante 4</option>
-                </select>
-            </div>
-            <input type="submit" value="Soumettre"></input>
-        </form>
-    </body>
 </html>
+<!-- end document-->

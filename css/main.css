@@ -261,7 +261,7 @@ h6 {
 }
 
 /* ==========================================================================
-   #DATE PICKER
+   #   PICKER
    ========================================================================== */
 td.active {
   background-color: #2c6ed5;
@@ -493,10 +493,10 @@ input {
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   width: 100%;
   display: table;
-}
+} 
 
 .card-3 .card-heading {
-  background: url("../images/bg-heading-03.jpg") top left/cover no-repeat;
+  background: url("../images/Team.jpg") top left/cover no-repeat;
   display: table-cell;
   width: 50%;
 }
